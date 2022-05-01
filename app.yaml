@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  dplwebapp
+  namespace: webapp
+  labels:
+    app:  webapp1
+    rakam: v1
+spec:
+  selector:
+    matchLabels:
+      app: webapp1
+      rakam: v1
+  replicas: 3
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app:  webapp1
+        rakam: v1
+    spec:
+      containers:
+      - name: httpd
+        image: httpd:2.4.53
+        ports:
+        - containerPort:  80
