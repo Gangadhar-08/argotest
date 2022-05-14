@@ -48,7 +48,7 @@ if __name__ == '__main__':
                     },
                     {
                         "type": "mrkdwn",
-                        "text": "*Triggered By:*\%s" %username
+                        "text": "*Triggered By:*\n%s" %username
                     }
                 ]
             },
