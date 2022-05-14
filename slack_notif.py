@@ -4,7 +4,7 @@ import sys
 import random
 import requests
 if __name__ == '__main__':
-    url = "https://hooks.slack.com/services/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"
+    url = "https://hooks.slack.com/services/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"
     locale1="de-de"
     username="ganga"
     ticketnum=1234
