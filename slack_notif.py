@@ -3,6 +3,7 @@ import json
 import sys
 import random
 import requests
+import base64
 if __name__ == '__main__':
     url_encoded = "aHR0cHM6Ly9ob29rcy5zbGFjay5jb20vc2VydmljZXMvVDAyUlhIN01CTUwvQjAzRjlVOEFYTE4vQVljaUpqMjh3a2pLMVJlM2c5ZmZFeW9mCg=="
     base64_bytes = url_encoded.encode('ascii')
