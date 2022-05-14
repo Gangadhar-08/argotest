@@ -4,7 +4,10 @@ import sys
 import random
 import requests
 if __name__ == '__main__':
-    url = "aHR0cHM6Ly9ob29rcy5zbGFjay5jb20vc2VydmljZXMvVDAyUlhIN01CTUwvQjAzRjlVOEFYTE4vQVljaUpqMjh3a2pLMVJlM2c5ZmZFeW9mCg=="
+    url_encoded = "aHR0cHM6Ly9ob29rcy5zbGFjay5jb20vc2VydmljZXMvVDAyUlhIN01CTUwvQjAzRjlVOEFYTE4vQVljaUpqMjh3a2pLMVJlM2c5ZmZFeW9mCg=="
+    base64_bytes = url_encoded.encode('ascii')
+    url_bytes = base64.b64decode(base64_bytes)
+    url = url_bytes.decode("ascii")
     locale1="de-de"
     username="ganga"
     ticketnum=1234
